@@ -3,7 +3,9 @@ html{
     font-size:16px;
     font-family: 'Roboto', sans-serif;
 }
-
+nav{
+    position:sticky;
+}
 header{
     width:100%;
     height:5rem;
@@ -45,19 +47,22 @@ nav ul li a {
 /* Content Starts */
 * {box-sizing:border-box}
 
+.giris {
+    position:relative;
+}
 /* Slideshow container */
 .slideshow-container {
-  max-width: 50%;
+  max-width: 100%;
   position: relative;
   margin: 2rem;
-  float:left;
-  box-shadow:-1rem -1rem black ;
   background: rgba( 255, 255, 255, 0.25 );
   box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
   backdrop-filter: blur( 6.5px );
   -webkit-backdrop-filter: blur( 6.5px );
   border-radius: 10px;
   border: 1px solid rgba( 255, 255, 255, 0.18 );
+
+
 }
 
 /* Hide the images by default */
@@ -141,6 +146,11 @@ nav ul li a {
 .fade {
   animation-name: fade;
   animation-duration: 1.5s;
+}
+.mySlides img {
+    z-index:-1;
+    padding:2%;
+    border-radius:10px;
 }
 
 @keyframes fade {
