@@ -73,5 +73,18 @@
     slides[slideIndex-1].style.display = "block";
     setTimeout(showSlides, 5000); // Change image every 2 seconds
   }
+
+  const logo = document.querySelector("img");
+
+const logoChange = () => {
+    if (logo.src.endsWith("torfy.png")) {
+        logo.src = "./media/torf.jpg";
+    } else if (logo.src.endsWith("torf.jpg")) {
+        logo.src = "./media/torfy.png";
+    }
+}
+
+logo.addEventListener("mouseover", logoChange);
+
   </script>
 </html>
