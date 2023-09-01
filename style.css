@@ -21,16 +21,11 @@ header{
     margin:0 35%;
     display:block;
     margin-left:50%;
-    margin-right 50%;
+    margin-right:50%;
     padding-top:10px;
     padding-bottom:auto;
     position:fixed;
 }
-
-nav{
-
-}
-
 nav ul li  {
     float:right;
     list-style-type: none;
@@ -46,3 +41,4 @@ nav ul li a {
     font-family: 'Roboto', sans-serif;
     justify-items:flex-end;
 }
+

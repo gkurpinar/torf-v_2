@@ -21,5 +21,54 @@
              </ul>
         </nav>
     </header>
+    <div class="slideshow-container">
+
+        <!-- Full-width images with number and caption text -->
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 5</div>
+          <img src="https://drive.google.com/uc?export=view&id=1G2MXsNBHnvaEQbPrtkkaWDnp-eajyIsn" style="width:100%">
+          <div class="text">Caption Text</div>
+        </div>
+      
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 5</div>
+          <img src="https://drive.google.com/uc?export=view&id=1A-rCWlcc26MW-eO-v3DhA4lMcoe1GTqL" style="width:100%">
+          <div class="text">Caption Two</div>
+        </div>
+      
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 5</div>
+          <img src="https://drive.google.com/uc?export=view&id=145yCgjNmdvz74JOpOLFvWGdR3r7RQndW" style="width:100%">
+          <div class="text">Caption Three</div>
+        </div>
+        <div class="mySlides fade">
+          <div class="numbertext">4 / 5</div>
+          <img src="https://drive.google.com/uc?export=view&id=15e7dD-Ccz77w_lEW3Qh0vZ9vTk8s0X2A" style="width:100%">
+          <div class="text">Caption Three</div>
+        </div>
+        <div class="mySlides fade">
+          <div class="numbertext">5 / 5</div>
+          <img src="https://drive.google.com/uc?export=view&id=1Ft5XwswuSuqXFLkDrBLNxoUTO_BQoi5z" style="width:100%">
+          <div class="text">Caption Three</div>
+        </div>
+
+    </div>
 </body>
+
+<script>
+    let slideIndex = 0;
+  showSlides();
+  
+  function showSlides() {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}
+    slides[slideIndex-1].style.display = "block";
+    setTimeout(showSlides, 5000); // Change image every 2 seconds
+  }
+  </script>
 </html>
