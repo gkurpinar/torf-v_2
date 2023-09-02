@@ -12,7 +12,7 @@
 <body>
     <header>
         <div id="headertorflogo">
-            <a href="#torfanasayfa"><img src="./media/torfy.png" alt="Torf Logo"></a>
+            <a href="#torfanasayfa"><img src="./media/Torf Logo/1.png" alt="Torf Logo"></a>
         </div>
         <nav>
             <ul>
@@ -26,7 +26,7 @@
         <!-- Full-width images with number and caption text -->
         <div class="mySlides fade">
           <div class="numbertext">1 / 5</div>
-          <img src="./media/1.jpg" style="width:100%">
+          <img src="./media/1.png" style="width:100%">
           <div class="text">Caption Text</div>
         </div>
       
@@ -48,7 +48,19 @@
         </div>
         <div class="mySlides fade">
           <div class="numbertext">5 / 5</div>
-          <img src="./media/4.jpg" style="width:100%">
+          <img src="./media/4.png" style="width:100%">
+          <div class="text">Caption Three</div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">5 / 5</div>
+          <img src="./media/3be6c9148407063.62d55cc25e86f.jpg" style="width:100% ">
+          <div class="text">Caption Three</div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">5 / 5</div>
+          <img src="./media/3ccf09166222529.6414606627790.jpg" style="width:100% ">
           <div class="text">Caption Three</div>
         </div>
       
@@ -76,15 +88,30 @@
 
   const logo = document.querySelector("img");
 
+  let intervalId;
+
 const logoChange = () => {
-    if (logo.src.endsWith("torfy.png")) {
-        logo.src = "./media/torf.jpg";
-    } else if (logo.src.endsWith("torf.jpg")) {
-        logo.src = "./media/torfy.png";
+    if (logo.src.endsWith("1.png")) {
+        logo.src = "./media/Torf Logo/2.png";
+    } else if (logo.src.endsWith("2.png")) {
+        logo.src = "./media/Torf Logo/3.png";
+    } else if (logo.src.endsWith("3.png")) {
+        logo.src = "./media/Torf Logo/4.png";
+    } else if (logo.src.endsWith("4.png")) {
+        logo.src = "./media/Torf Logo/5.png";
+    } else if (logo.src.endsWith("5.png")) {
+        logo.src = "./media/Torf Logo/1.png";
     }
 }
 
-logo.addEventListener("mouseover", logoChange);
+  logo.addEventListener("mouseover", () => {
+    intervalId = setInterval(logoChange, 80); // 500 milisaniye (0.5 saniye) aralıklarla logoChange fonksiyonunu çağırır.
+  });
+
+  logo.addEventListener("mouseout", () => {
+    clearInterval(intervalId); // mouse çıkınca interval'i temizler, değişiklik yapmayı durdurur.
+  });
+
 
   </script>
 </html>
